@@ -9,13 +9,14 @@ namespace СS7
             int peopleLine;
             int doctorSession = 10;
             int waitingTime;
-            int waitingHour = 60;
-            int waitingMinute = 60;
+            int waitingHour;
+            int waitingMinute;
+            int minutesHour = 60;
             Console.Write("Введите кол-во людей в очереди: ");
             peopleLine = Convert.ToInt32(Console.ReadLine());
             waitingTime = peopleLine * doctorSession;
-            waitingHour = waitingTime / waitingMinute;
-            waitingMinute = waitingTime % waitingMinute;
+            waitingHour = waitingTime / minutesHour;
+            waitingMinute = waitingTime % minutesHour;
             Console.WriteLine("Вы должны отстоять в очереди: " + waitingHour + " час и " + waitingMinute + " мин");
         }
     }
