@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace СS7
 {
@@ -9,14 +9,14 @@ namespace СS7
             int peopleLine;
             int doctorSession = 10;
             int waitingTime;
-            int hour = 60;
-            int min = 60;
+            int waitingHour = 60;
+            int waitingMinute = 60;
             Console.Write("Введите кол-во людей в очереди: ");
             peopleLine = Convert.ToInt32(Console.ReadLine());
             waitingTime = peopleLine * doctorSession;
-            hour = waitingTime / hour;
-            min = waitingTime % min;
-            Console.WriteLine("Вы должны отстоять в очереди: " + hour + " часа и " + min + " мин");
+            waitingHour = waitingTime / waitingMinute;
+            waitingMinute = waitingTime % waitingMinute;
+            Console.WriteLine("Вы должны отстоять в очереди: " + waitingHour + " час и " + waitingMinute + " мин");
         }
     }
 }
